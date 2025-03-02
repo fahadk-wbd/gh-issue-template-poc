@@ -11,7 +11,8 @@ jobs:
         run: |
          pwd
          ls -lrth
-         echo HOME
+         echo $HOME
+         echo ${{ env.WORK_DIR }}
       - name: Parse Issue Template
         uses: ./
         id: issue-parser
