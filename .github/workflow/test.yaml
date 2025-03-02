@@ -1,0 +1,15 @@
+name: Sample Workflow
+run-name: ${{ github.actor }} is creating a custom GitHub Actions
+on:
+  issues:
+    types: [opened]
+jobs:
+  process-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./
+        id: issue-parser
+        with:
+          template-path: /.github/ISSUE_TEMPLATE/new-omd-service.yaml # optional but recommended
+      
+      - run: cat ${HOME}/issue-parser-result.json
