@@ -7,7 +7,12 @@ jobs:
   process-issue:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./
+      - name: Run commands
+        run: pwd
+        run: ls -lrth
+        run: echo HOME
+      - name: Parse Issue Template
+        uses: ./
         id: issue-parser
         with:
           template-path: /.github/ISSUE_TEMPLATE/new-omd-service.yaml # optional but recommended
