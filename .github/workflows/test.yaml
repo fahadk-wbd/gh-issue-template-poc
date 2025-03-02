@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run commands
-        run: pwd
-        run: ls -lrth
-        run: echo HOME
+        run: |
+         pwd
+         ls -lrth
+         echo HOME
       - name: Parse Issue Template
         uses: ./
         id: issue-parser
