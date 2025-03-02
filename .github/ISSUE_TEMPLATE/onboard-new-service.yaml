@@ -1,0 +1,19 @@
+name: Onboard a new OMD service
+description: Onboard a new OMD service
+labels: ["onboard_new_service"]
+body:
+- type: input
+  id: omd_service_name
+  attributes:
+    label: OMD Service Name
+  validations:
+    required: true
+- type: checkboxes
+  id: cluster_type
+  attributes:
+    label: Select Cluster Type(s)
+    options:
+    - label: boltapi
+    - label: bolto11y
+  validations:
+    required: true
