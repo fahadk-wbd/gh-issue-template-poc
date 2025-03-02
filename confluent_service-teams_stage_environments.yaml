@@ -1,0 +1,17 @@
+---
+apiVersion: infra.wbd.com/v1alpha3
+kind: Environments
+definitions:
+  - api-dev: &api-dev
+      awsIAMRoleARN: "arn:aws:iam::833650165576:role/github-actions-asynchronous-messaging-solution"
+      omdEnvironmentName: dev
+      terraformStateFileBucket: bolt-terraform-state-nonprod
+      terraformStateFileLockDynamoDBTable: bolt-terraform-state-nonprod
+      awsAccountAlias: wbd-boltcloud-api-dev
+
+spec:
+  environments:
+    - <<: *api-dev
+      awsRegionName: us-east-1
+      baseDirectory: v2/infra/terraform/service-teams/ams-global-test/boltapi/any-any
+      runnerLabel: development

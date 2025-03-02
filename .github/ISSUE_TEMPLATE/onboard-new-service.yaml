@@ -17,3 +17,20 @@ body:
     - label: bolto11y
   validations:
     required: true
+- type: checkboxes
+  id: environment
+  attributes:
+    label: Select Environment(s)
+    options:
+    - label: dev
+    - label: int
+    - label: stage
+    - label: prod
+  validations:
+    required: true
+- type: input
+  id: omd_component_names
+  attributes:
+    label: OMD Component Name(s) [Comma Separated]
+  validations:
+    required: true
