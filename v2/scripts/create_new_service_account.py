@@ -72,7 +72,7 @@ aws_region          = "us-east-1\"""")
     service_account_file_content = {'service-accounts': service_accounts + service_accounts_to_be_created}
     print(service_account_file_content)
     with open(f"{base_service_dir}/service-account.yaml", 'w') as service_accounts_yaml:
-        service_accounts_yaml.write( yaml.dump(service_account_file_content, default_flow_style=True))
+        service_accounts_yaml.write( yaml.dump(service_account_file_content, default_flow_style=False))
 
 
 # with open(f'issue-parser-result.json', 'r') as input_json_file:
