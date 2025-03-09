@@ -7,3 +7,7 @@
       awsRegionName: us-east-1
       baseDirectory: v2/infra/terraform/service-teams/ams-test-six/boltapi/any-any
       runnerLabel: development
+    - <<: *api-dev
+      awsRegionName: us-east-1
+      baseDirectory: v2/infra/terraform/service-teams/ams-test-nine/boltapi/any-any
+      runnerLabel: development
