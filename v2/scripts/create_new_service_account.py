@@ -90,4 +90,5 @@ for env in input_json['environment']:
         update_service_teams_directory(omd_service, omd_components)
     
     else:
+        print(os.getcwd())
         update_service_teams_directory(omd_service, omd_components)
