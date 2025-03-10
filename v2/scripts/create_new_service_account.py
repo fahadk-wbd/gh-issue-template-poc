@@ -88,3 +88,6 @@ for env in input_json['environment']:
     if not check_if_omd_service_exists_in_env(omd_service, filename):
         update_environment_yaml_file(omd_service, filename)
         update_service_teams_directory(omd_service, omd_components)
+    
+    else:
+        update_service_teams_directory(omd_service, omd_components)
