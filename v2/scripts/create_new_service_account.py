@@ -24,6 +24,8 @@ def update_service_teams_directory(omd_service, omd_components):
     # Check if base service directory exists, if not create it
     if not os.path.isdir(base_service_dir):
         os.makedirs(base_service_dir, exist_ok=True)
+    else:
+        print("Adding new component to existing service account")
 
     # Check if terragrunt.hcl exists, if not create it
     if not os.path.isfile(f"{base_service_dir}/terragrunt.hcl"):
