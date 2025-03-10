@@ -63,7 +63,7 @@ aws_region          = "us-east-1\"""")
 
     # Check if service account yaml file exists, if not create it
     if os.path.isfile(f"{base_service_dir}/service-account.yaml"):
-        with open(f"{base_service_dir}/service_account.yaml", 'r') as service_accounts_yaml:
+        with open(f"{base_service_dir}/service-account.yaml", 'r') as service_accounts_yaml:
             service_accounts = yaml.load(service_accounts_yaml, Loader=yaml.SafeLoader)["service-accounts"]
     else:
             service_accounts = []
