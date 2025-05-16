@@ -7,7 +7,7 @@ print(os.getcwd())
 # --- Configuration ---
 GITHUB_TOKEN = sys.argv[1]  # Your GitHub PAT
 REPO_NAME = "fahadk-wbd/gh-issue-template-poc" # Format: username/repo
-LOCAL_FILE_PATH = "issue_template.md" 
+LOCAL_FILE_PATH = "gh-issue-template-poc/issue_template.md" 
 REPO_FILE_PATH = "gh-issue-template-poc/issue_template.md" 
 BRANCH = "new"
 COMMIT_MESSAGE = "This is commit message"
@@ -17,7 +17,7 @@ git = Github(GITHUB_TOKEN)
 repo = git.get_repo(REPO_NAME)
 
 # --- Read local file content ---
-with open(LOCAL_FILE_PATH, 'rb') as f:
+with open("issue_template.md", 'rb') as f:
     local_content = f.read()
 
 # --- Fetch current content and SHA from GitHub ---
