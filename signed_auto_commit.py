@@ -3,6 +3,7 @@ import base64
 import os
 import sys
 
+print(os.getcwd())
 # --- Configuration ---
 GITHUB_TOKEN = sys.argv[1]  # Your GitHub PAT
 REPO_NAME = "fahadk/gh-issue-template-poc" # Format: username/repo
