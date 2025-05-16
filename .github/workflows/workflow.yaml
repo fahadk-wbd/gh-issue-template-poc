@@ -18,7 +18,7 @@ jobs:
           pwd
           ls -lrth
           date > issue_template.md
-          
+          pip3 install -r requirements.txt
           python3 signed_auto_commit.py ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
