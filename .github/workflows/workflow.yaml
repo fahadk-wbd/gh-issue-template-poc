@@ -17,7 +17,7 @@ jobs:
           git config user.email "<>"
           pwd
           ls -lrth
-          date > gh-issue-template-poc/issue.template.md
+          date > gh-issue-template-poc/issue_template.md
           
           python3 ${{ secrets.GITHUB_TOKEN }}
         env:
