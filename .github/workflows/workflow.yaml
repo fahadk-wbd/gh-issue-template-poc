@@ -19,7 +19,7 @@ jobs:
           ls -lrth
           date > issue_template.md
           
-          python3 ${{ secrets.GITHUB_TOKEN }}
+          python3 signed_auto_commit.py ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
