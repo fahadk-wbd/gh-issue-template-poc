@@ -1,0 +1,24 @@
+name: Test signed autocommit
+run-name: ${{ github.actor }} is testing signed autocommit
+on:
+  issue_comment:
+    types: [created, deleted]
+jobs:
+  process-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      
+      - name: Commit Changes
+        run: | 
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+          date > gh-issue-template-poc/issue.template.md
+          
+          python3 ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
