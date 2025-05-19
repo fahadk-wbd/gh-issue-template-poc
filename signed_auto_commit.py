@@ -9,7 +9,7 @@ GITHUB_TOKEN = sys.argv[1]  # Your GitHub PAT
 REPO_NAME = "fahadk-wbd/gh-issue-template-poc" # Format: username/repo
 LOCAL_FILE_PATH = "gh-issue-template-poc/issue_template.md" 
 REPO_FILE_PATH = "gh-issue-template-poc/issue_template.md" 
-BRANCH = "new"
+BRANCH = "new-doesnstexist-branch"  # Branch to commit to
 COMMIT_MESSAGE = "This is commit message"
 
 # --- Authenticate with GitHub ---
